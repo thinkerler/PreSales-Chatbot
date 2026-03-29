@@ -1,0 +1,64 @@
+app:
+  name: taotian-presale-rag
+  env: dev
+  log_level: INFO
+
+paths:
+  kb_file: knowledge_base/presale_kb.jsonl
+  eval_file: data/eval/eval_dataset_v1.jsonl
+  index_dir: data/index
+  profile_db: data/profiles.db
+
+ingestion:
+  # false：启动时不再跑 MinerU/嵌入，直接加载已有 data/index（重启 API 秒起）。更新知识库请改 true 一次或运行 scripts/run_mineru_pipeline.py
+  build_on_startup: false
+  source_type: mineru_langchain # options: jsonl | mineru_markdown | mineru_langchain
+  mineru_auto_run: false
+  mineru_input_dir: data/mineru_input
+  mineru_output_dir: data/mineru_output
+  mineru_command_template: magic-pdf -p "{input_file}" -o "{output_dir}" -m txt
+  # precision：表格/图片内文字更强，适合「浏览器打印网页」类 PDF；需配置 token（见下）
+  mineru_mode: precision # options: flash | precision
+  # 可填 token，或设置环境变量 MINERU_API_TOKEN（推荐，避免写进仓库）
+  mineru_token: null
+  mineru_split_pages: false
+  mineru_language: ch
+  mineru_timeout: 1200
+
+retrieval:
+  splitter_type: recursive
+  faiss_index_type: flatip  # options: flatip | ivfflat
+  faiss_nlist: 64
+  faiss_nprobe: 8
+  chunk_size: 260
+  chunk_overlap: 40
+  top_k_dense: 8
+  top_k_sparse: 8
+  top_k_final: 6
+  rrf_k: 60
+  use_reranker: true
+  reranker_model: BAAI/bge-reranker-base
+  score_threshold: 0.26
+
+generation:
+  system_role: 淘天售前导购助手
+  use_ollama: false
+  ollama_model: qwen2.5:7b
+  online_fallback: false
+  temperature: 0.2
+  max_tokens: 600
+  # 使用阿里云 DashScope 兼容 OpenAI 接口；密钥请设置环境变量 DASHSCOPE_API_KEY
+  llm_backend: dashscope # options: ollama | dashscope
+  dashscope_model: qwen-plus
+  dashscope_intent_model: qwen-turbo
+  use_intent_router: true
+  intent_timeout_sec: 12
+
+langchain:
+  chain_mode: full
+  retriever_mode: hybrid
+
+runtime:
+  request_timeout_sec: 20
+  max_concurrency: 16
+  max_retries: 2

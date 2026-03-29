@@ -1,1 +1,5 @@
-# PreSales-Chatbot-
+PreSales-Chatbot
+面向售前导购场景的 RAG 智能客服系统
+设计并实现面向电商售前场景的 RAG 客服系统，支持私有知识库检索、多轮问答、证据可追溯回答。 
+===
+

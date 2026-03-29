@@ -1,0 +1,20 @@
+{"id":"q001","intent":"商品对比","query":"XPhone A和XPhone B哪个更适合拍照和重度使用？","relevant_doc_ids":["prod_phone_a","prod_phone_b","guide_phone_photo","guide_phone_battery"],"expected_keypoints":["比较主摄参数","比较电池和快充","给出适配场景建议"]}
+{"id":"q002","intent":"商品对比","query":"我手小，喜欢轻便，XPhone B值得买吗？","relevant_doc_ids":["prod_phone_b"],"expected_keypoints":["强调轻薄手感","说明适合日常场景"]}
+{"id":"q003","intent":"商品对比","query":"AirBook 14和GamePro 16怎么选？","relevant_doc_ids":["prod_laptop_a","prod_laptop_b","guide_laptop_office","guide_laptop_creator"],"expected_keypoints":["区分办公和创作场景","比较性能和便携性"]}
+{"id":"q004","intent":"活动规则","query":"618能叠加店铺券吗？","relevant_doc_ids":["campaign_618","rule_coupon_stack"],"expected_keypoints":["说明跨店满减和店铺券叠加","提醒以结算页为准"]}
+{"id":"q005","intent":"活动规则","query":"新人礼金和红包可以一起用吗？","relevant_doc_ids":["campaign_new_user","rule_coupon_stack"],"expected_keypoints":["说明不可与部分红包同享","提示以页面规则为准"]}
+{"id":"q006","intent":"活动规则","query":"买完降价了能补差价吗？","relevant_doc_ids":["rule_price_protect"],"expected_keypoints":["7天价保","订单页申请"]}
+{"id":"q007","intent":"售前问答","query":"现货多久发货，预售呢？","relevant_doc_ids":["rule_ship_time"],"expected_keypoints":["现货48小时内","预售按页面日期"]}
+{"id":"q008","intent":"售前问答","query":"能开发票吗，专票要什么信息？","relevant_doc_ids":["rule_invoice"],"expected_keypoints":["支持电子发票和专票","专票字段要求"]}
+{"id":"q009","intent":"推荐理由","query":"我主要拍短视频，续航也要好，推荐哪款手机？","relevant_doc_ids":["guide_phone_photo","guide_phone_battery","prod_phone_a","prod_phone_b"],"expected_keypoints":["视频和防抖需求","续航需求","给出型号建议"]}
+{"id":"q010","intent":"推荐理由","query":"我是大学生，预算一般，想买办公本。","relevant_doc_ids":["guide_laptop_office","prod_laptop_a"],"expected_keypoints":["强调办公需求","配置建议16GB起"]}
+{"id":"q011","intent":"售前问答","query":"支持分期吗？费率怎么看？","relevant_doc_ids":["faq_installment"],"expected_keypoints":["支持花呗或信用卡分期","费率以支付页为准"]}
+{"id":"q012","intent":"售前问答","query":"手机保修多久？","relevant_doc_ids":["faq_warranty"],"expected_keypoints":["整机一年","核心部件按品牌政策"]}
+{"id":"q013","intent":"售前问答","query":"这个商品能7天无理由吗？","relevant_doc_ids":["faq_return_policy"],"expected_keypoints":["满足完好标准可退","特殊品类不支持"]}
+{"id":"q014","intent":"活动规则","query":"跨店满减和品类券是能一起用吗？","relevant_doc_ids":["rule_coupon_stack"],"expected_keypoints":["可叠加","结算页为准"]}
+{"id":"q015","intent":"推荐理由","query":"我做视频剪辑，偶尔玩3A游戏，电脑推荐？","relevant_doc_ids":["prod_laptop_b","guide_laptop_creator"],"expected_keypoints":["强调独显和散热","推荐高性能本"]}
+{"id":"q016","intent":"售前问答","query":"库存显示紧张，我现在不下单会不会没货？","relevant_doc_ids":["risk_notice_stock"],"expected_keypoints":["提醒尽快下单","库存以提交订单锁定为准"]}
+{"id":"q017","intent":"活动规则","query":"618活动什么时候结束？","relevant_doc_ids":["campaign_618"],"expected_keypoints":["活动时间窗口","库存有限"]}
+{"id":"q018","intent":"商品对比","query":"XPhone A和B哪个续航更稳？","relevant_doc_ids":["prod_phone_a","prod_phone_b","guide_phone_battery"],"expected_keypoints":["对比电池容量和快充","结合使用场景结论"]}
+{"id":"q019","intent":"推荐理由","query":"我经常出差，电脑要轻一点但也别太弱。","relevant_doc_ids":["guide_laptop_office","prod_laptop_a"],"expected_keypoints":["便携+性能平衡","推荐轻薄本配置"]}
+{"id":"q020","intent":"售前问答","query":"发票开好以后在哪下载？","relevant_doc_ids":["rule_invoice"],"expected_keypoints":["订单页下载"]}

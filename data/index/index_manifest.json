@@ -1,0 +1,11 @@
+{
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "source_type": "mineru_langchain",
+  "splitter_type": "recursive",
+  "chunk_size": 260,
+  "chunk_overlap": 40,
+  "faiss_index_type": "flatip",
+  "faiss_nlist": 64,
+  "raw_doc_count": 9,
+  "chunk_count": 144
+}
